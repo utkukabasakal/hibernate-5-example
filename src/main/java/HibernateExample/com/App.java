@@ -29,10 +29,11 @@ public class App {
         personDAO.insert(person2);
         personDAO.insert(person3);
 
+        personDAO.deleteById(100);
+
         List<Person> people = personDAO.findAll();
         people.forEach(person -> {
             System.out.println(person);
         });
-       // personDAO.insert(new Person("Ahmet", "Koç", 20));
     }
 }
